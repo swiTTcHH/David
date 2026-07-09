@@ -83,30 +83,30 @@ export default function Experience() {
   return (
     <section id="experience" className="border-t border-ink py-16">
       {/* Header */}
-      <div className="flex items-end gap-4 mb-10">
+      <div className="flex flex-col items-start sm:flex-row sm:items-end gap-1 sm:gap-4 mb-10">
         <h2 className="text-4xl font-bold tracking-tight">
           Work <span className="text-accent2">Experience</span>
         </h2>
-        <span className="text-muted text-sm mb-1">
+        <span className="text-muted text-sm mb-1 font-semibold">
           Professional Journey &amp; Milestones
         </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Sidebar Selector */}
-        <div className="md:col-span-4 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-2 border-ink bg-card-bg">
+        <div className="md:col-span-4 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-2 border-ink bg-card-bg divide-x md:divide-x-0 md:divide-y divide-ink scrollbar-none shrink-0">
           {experiences.map((exp) => (
             <button
               key={exp.id}
               onClick={() => setActiveId(exp.id)}
-              className={`w-full text-left px-5 py-4 text-sm font-bold border-b border-ink last:border-b-0 md:border-b md:border-r-0 border-r last:border-r-0 transition-all duration-200 cursor-pointer whitespace-nowrap md:whitespace-normal
+              className={`w-auto md:w-full text-left px-5 py-4 text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer whitespace-nowrap md:whitespace-normal shrink-0
                 ${
                   activeId === exp.id
                     ? `${exp.bgColor} text-white`
                     : "bg-card-bg text-ink hover:bg-paper"
                 }`}
             >
-              <div className="text-xs uppercase opacity-75 mb-1">{exp.period}</div>
+              <div className="text-[10px] uppercase opacity-75 mb-1">{exp.period}</div>
               <div className="truncate md:normal-case font-semibold">{exp.company}</div>
             </button>
           ))}
@@ -117,14 +117,14 @@ export default function Experience() {
           {/* Top corner design accent */}
           <div className={`absolute top-0 right-0 h-2 left-0 ${current.bgColor}`} />
 
-          <div className="pt-2 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-6">
+          <div className="pt-2 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-6">
             <div>
               <h3 className="text-2xl font-bold text-ink">{current.role}</h3>
               <p className={`font-semibold ${current.color} text-lg`}>
                 {current.company}
               </p>
             </div>
-            <div className="text-right sm:text-right text-left">
+            <div className="text-left sm:text-right shrink-0">
               <span className="inline-block bg-paper border border-ink text-ink text-xs font-bold px-2 py-1 uppercase">
                 {current.period}
               </span>

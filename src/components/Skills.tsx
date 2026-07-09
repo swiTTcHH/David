@@ -91,22 +91,22 @@ export default function Skills() {
   return (
     <section className="border-t border-ink py-12">
       {/* Heading */}
-      <div className="flex items-end gap-4 mb-8">
+      <div className="flex flex-col items-start sm:flex-row sm:items-end gap-1 sm:gap-4 mb-8">
         <h2 className="text-4xl font-bold tracking-tight">
           Technical <span className="text-accent1">Skills</span>
         </h2>
-        <span className="text-muted text-sm mb-1">
+        <span className="text-muted text-sm mb-1 font-semibold">
           Frontend &amp; Mobile (React Native)
         </span>
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex gap-0 mb-8 border-2 border-ink max-w-max overflow-hidden">
+      <div className="flex overflow-x-auto max-w-full border-2 border-ink mb-8 scrollbar-none">
         {categories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => setActiveTab(cat.id)}
-            className={`px-5 py-2 text-sm font-semibold uppercase tracking-wider transition-all duration-200 border-r border-ink last:border-r-0 cursor-pointer
+            className={`px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 border-r border-ink last:border-r-0 cursor-pointer whitespace-nowrap flex-shrink-0
               ${
                 activeTab === cat.id
                   ? `${cat.bgColor} text-white`
@@ -117,6 +117,7 @@ export default function Skills() {
           </button>
         ))}
       </div>
+
 
       {/* Skills Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">

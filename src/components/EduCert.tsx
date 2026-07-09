@@ -102,12 +102,12 @@ export default function EduCert() {
                   <div
                     key={cert.title}
                     onClick={() => toggleCheck(cert.title)}
-                    className={`flex items-center justify-between p-3 border-2 border-ink cursor-pointer select-none transition duration-200
+                    className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-3 border-2 border-ink cursor-pointer select-none transition duration-200
                       ${isChecked ? "bg-paper border-ink" : "bg-card-bg hover:bg-paper"}`}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-start gap-3">
                       {/* Interactive checkbox indicator */}
-                      <div className={`w-5 h-5 border-2 border-ink flex items-center justify-center font-bold text-xs shrink-0
+                      <div className={`w-5 h-5 border-2 border-ink flex items-center justify-center font-bold text-xs shrink-0 mt-0.5
                         ${isChecked ? `${cert.bgColor} text-white` : "bg-white text-transparent"}`}
                       >
                         ✓
@@ -120,7 +120,7 @@ export default function EduCert() {
                       </div>
                     </div>
 
-                    <span className="text-[10px] font-black uppercase text-ink/80 font-mono tracking-wider">
+                    <span className="text-[10px] font-black uppercase text-ink/80 font-mono tracking-wider pl-8 sm:pl-0">
                       {cert.date}
                     </span>
                   </div>

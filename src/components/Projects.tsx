@@ -44,11 +44,11 @@ export default function Projects() {
   return (
     <section id="projects" className="border-t border-ink py-16">
       {/* Heading */}
-      <div className="flex items-end gap-4 mb-10">
+      <div className="flex flex-col items-start sm:flex-row sm:items-end gap-1 sm:gap-4 mb-10">
         <h2 className="text-4xl font-bold tracking-tight">
           Featured <span className="text-accent3 font-black">Projects</span>
         </h2>
-        <span className="text-muted text-sm mb-1">
+        <span className="text-muted text-sm mb-1 font-semibold">
           Recent Mobile &amp; Web Apps
         </span>
       </div>
@@ -57,7 +57,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
         {/* Project Description (Left) */}
-        <div className="lg:col-span-6 flex flex-col justify-between border-2 border-ink bg-card-bg p-8 shadow-[4px_4px_0px_0px_rgba(13,13,13,1)]">
+        <div className="lg:col-span-6 flex flex-col justify-between border-2 border-ink bg-card-bg p-6 sm:p-8 shadow-[4px_4px_0px_0px_rgba(13,13,13,1)]">
           <div className="space-y-6">
             {/* Header Badge */}
             <div className="flex items-center justify-between">
@@ -121,7 +121,7 @@ export default function Projects() {
         </div>
 
         {/* Interactive Device Demo (Right) */}
-        <div className="lg:col-span-6 flex flex-col justify-center items-center p-4 bg-paper/50 border-2 border-dashed border-ink/30 rounded-xl">
+        <div className="lg:col-span-6 flex flex-col justify-center items-center p-3 sm:p-6 bg-paper/50 border-2 border-dashed border-ink/30 rounded-xl overflow-hidden">
           <div className="text-center mb-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-ink mb-1">
               📱 Interactive Prototype Mock
@@ -132,7 +132,7 @@ export default function Projects() {
           </div>
 
           {/* Mobile phone container */}
-          <div className="w-[320px] h-[540px] bg-[#121212] border-4 border-ink rounded-[40px] shadow-[8px_8px_0px_0px_rgba(13,13,13,1)] relative overflow-hidden flex flex-col p-3 text-white font-sans">
+          <div className="w-full max-w-[320px] h-[540px] bg-[#121212] border-4 border-ink rounded-[40px] shadow-[8px_8px_0px_0px_rgba(13,13,13,1)] relative overflow-hidden flex flex-col p-3 text-white font-sans shrink-0">
             
             {/* Phone Speaker & Camera Notch */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-4 bg-ink rounded-full z-20 flex justify-center items-center">

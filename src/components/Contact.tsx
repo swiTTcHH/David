@@ -17,11 +17,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="border-t border-ink py-16">
-      <div className="flex items-end gap-4 mb-10">
+      <div className="flex flex-col items-start sm:flex-row sm:items-end gap-1 sm:gap-4 mb-10">
         <h2 className="text-4xl font-bold tracking-tight">
           Get In <span className="text-accent1">Touch</span>
         </h2>
-        <span className="text-muted text-sm mb-1">
+        <span className="text-muted text-sm mb-1 font-semibold">
           Let's collaborate on your next project
         </span>
       </div>
