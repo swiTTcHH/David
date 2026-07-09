@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    /* font */
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+    /* colours */
+    --color-ink: #0d0d0d;
+    --color-paper: #f5f0e8;
+    --color-accent1: #e84c1e;
+    --color-accent2: #1a5276;
+    --color-accent3: #f0c040;
+    --color-muted: #7a7060;
+    --color-card-bg: #fff;
+  }
